@@ -1,0 +1,147 @@
+:root {
+  --bg: #090b17;
+  --bg-2: #111735;
+  --text: #ecf1ff;
+  --muted: #b3bddf;
+  --accent: #a3b8ff;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, #243d9e, var(--bg) 35%), var(--bg);
+  line-height: 1.6;
+}
+
+.hero {
+  min-height: 75vh;
+  padding: 1.5rem clamp(1rem, 3vw, 2.5rem) 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a,
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.hero-content {
+  margin-top: auto;
+  max-width: 720px;
+}
+
+.kicker {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1.25rem;
+  background: var(--accent);
+  color: #111735;
+  padding: 0.75rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.section {
+  padding: 3rem clamp(1rem, 3vw, 2.5rem);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.join {
+  background: linear-gradient(180deg, transparent, var(--bg-2));
+}
+
+.signup {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.signup input,
+.signup button {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 0.7rem 1rem;
+  font: inherit;
+}
+
+.signup input {
+  min-width: 240px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.signup button {
+  background: var(--accent);
+  color: #111735;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+footer {
+  padding: 1rem clamp(1rem, 3vw, 2.5rem) 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
